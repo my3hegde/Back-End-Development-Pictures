@@ -81,7 +81,7 @@ def create_picture():
         data.append(new_picture)
     except NameError:
         return {"message": "data not defined"}, 500
-    # Assuming the processing is successful, return the person's id with status code 200
+    # Assuming the processing is successful, return the picture id with status code 200
     return new_picture, 201
 
 ######################################################################
@@ -99,7 +99,7 @@ def update_picture(id):
                 return picture, 200
     except NameError:
         return {"message": "data not defined"}, 500
-    # Assuming the processing is successful, return the person's id with status code 200
+    # Assuming the processing is successful, return the picture id with status code 200
     return {"message": "picture not found"},404
 ######################################################################
 # DELETE A PICTURE
@@ -113,5 +113,5 @@ def delete_picture(id):
                 return {}, 204
     except NameError:
         return {"message": "data not defined"}, 500
-    # Assuming the processing is successful, return the person's id with status code 200
+    # Assuming the processing is successful, return the picture id with status code 200
     return {"message": "picture not found"},404
